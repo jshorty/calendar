@@ -1,2 +1,2 @@
-# calendar
-Simple calendar built with JavaScript.
+# Calendar
+This is a simple calendar built in JavaScript.

@@ -1,9 +1,7 @@
 /* RESET */
-html, body, header, nav, h1, a,
-ul, li, strong, main, button, i,
-section, img, div, h2, p, form,
-fieldset, label, input, textarea,
-span, article, footer, time, small {
+html, body, header, h1,
+ul, li, button,
+section, div {
   margin: 0;
   padding: 0;
   border: 0;
@@ -27,11 +25,6 @@ ul {
   list-style: none;
 }
 
-body {
-  font-family: 'Myriad Apple', sans-serif;
-  color: #333;
-}
-
 
 
 /* CLEARFIX */
@@ -44,6 +37,11 @@ body {
 
 
 /* CONTENT */
+body {
+  font-family: 'Myriad Apple', sans-serif;
+  color: #333;
+}
+
 #calendar {
   margin: 50px auto;
   border: 8px solid #333;
@@ -59,6 +57,10 @@ body {
   background: #eee;
 }
 
+header {
+  height: 50px;
+}
+
 #date-box header {
   display: block;
   background: linear-gradient(#ff3300, #991111);
@@ -72,10 +74,6 @@ h1 {
   padding: 12px 0px 5px;
   font-size: 24px;
   color: #fff;
-}
-
-#date-box h1 {
-
 }
 
 #date {
@@ -108,15 +106,6 @@ h1 {
   height: 300px;
 }
 
-#month-box h1 {
-  float: left;
-  padding-top: 12px;
-  width: 260px;
-  height: 100%;
-  text-align: center;
-  color: #666;
-}
-
 #month-box button {
   width: 70px;
   height: 100%;
@@ -127,15 +116,25 @@ h1 {
   font-weight: bold;
 }
 
+#month-box h1 {
+  float: left;
+  width: 260px;
+  padding-top: 15px;
+  text-align: center;
+  color: #666;
+}
+
 .month-dates {
   height: 227px;
   padding: 10px;
-  background: gray;
+}
+
+.month-dates .weekdays {
+  color: #991111;
+  margin-bottom: 10px;
 }
 
 .month-dates ul {
-  background: blue;
-  width: 100%;
   margin: 0 auto;
   padding: 0px 10px;
 }
@@ -143,20 +142,20 @@ h1 {
 li {
   float: left;
   width: 50px;
-  height: 30px;
+  height: 20px;
   margin-top: 5px;
+  padding-top: 5px;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-#date-list > li {
+#date-list li {
   cursor: pointer;
+  border-right: 1px dashed #ccc;
 }
 
 li.selected {
-  background: red;
-}
-
-header {
-  height: 50px;
+  color: #fff;
+  background: #ff3300;
 }

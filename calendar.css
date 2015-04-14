@@ -42,14 +42,14 @@ body {
   color: #333;
 }
 
-#calendar {
+.calendar {
   margin: 50px auto;
   border: 8px solid #333;
   border-radius: 10px;
   width: 708px;
 }
 
-#date-box {
+.date-box {
   float: left;
   border-right: 8px solid #333;
   width: 300px;
@@ -61,7 +61,7 @@ header {
   height: 50px;
 }
 
-#date-box header {
+.date-box header {
   display: block;
   background: linear-gradient(#ff3300, #991111);
   border: 2px solid #cc3333;
@@ -89,7 +89,7 @@ h1 {
   text-shadow: 5px 3px 6px #fff, 0 0 0 #000;
 }
 
-#date:after {
+#date:after { /* stacked page effect */
   content: "";
   display: block;
   height: 5px;
@@ -100,13 +100,13 @@ h1 {
   border-radius: 5px;
 }
 
-#month-box {
+.month-box {
   float: left;
   width: 400px;
   height: 300px;
 }
 
-#month-box button {
+button {
   width: 70px;
   height: 100%;
   float: left;
@@ -116,7 +116,7 @@ h1 {
   font-weight: bold;
 }
 
-#month-box h1 {
+.month-box h1 {
   float: left;
   width: 260px;
   padding-top: 15px;
@@ -129,14 +129,14 @@ h1 {
   padding: 10px;
 }
 
+ul {
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+
 .month-dates .weekdays {
   color: #991111;
   margin-bottom: 10px;
-}
-
-.month-dates ul {
-  margin: 0 auto;
-  padding: 0px 10px;
 }
 
 li {
@@ -150,12 +150,12 @@ li {
   font-weight: bold;
 }
 
-#date-list li {
-  cursor: pointer;
-  border-right: 1px dashed #ccc;
-}
-
 li.selected {
   color: #fff;
   background: #ff3300;
+}
+
+#date-list li {
+  cursor: pointer;
+  border-right: 1px dashed #ccc;
 }

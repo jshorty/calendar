@@ -1,84 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
 <body>
-  <section id="calendar">
+  <section id="calendar" class="group">
     <section id="date-box">
+      <header>
+        <h1 id="day"></h1>
+      </header>
+      <div id="date"></div>
     </section>
 
     <section id="month-box">
-      <header>
-        <button class="change-month left"><</button>
-        <!--MONTH YEAR -->
-        <button class="change-month right">></button>
+      <header class="group">
+        <button id="prev-month"><</button>
+        <h1 id="month-year"></h1>
+        <button id="next-month">></button>
       </header>
-      <table>
-        <tr class="dates-week">
-          <th>S</th>
-          <th>M</th>
-          <th>T</th>
-          <th>W</th>
-          <th>T</th>
-          <th>F</th>
-          <th>S</th>
-        </tr>
-        <tr class="dates-week">
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="dates-week">
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="dates-week">
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="dates-week">
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="dates-week">
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="dates-week">
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
+      <section class="month-dates">
+        <ul class="weekdays group">
+          <li>S</li>
+          <li>M</li>
+          <li>T</li>
+          <li>W</li>
+          <li>T</li>
+          <li>F</li>
+          <li>S</li>
+        </ul>
+        <ul id="date-list" class="group">
+        </ul>
+      </section>
     </section>
 
   </section>
+  <script src="calendar.js"></script>
 </body>
 </html>

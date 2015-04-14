@@ -49,9 +49,9 @@
     monthAndYear.innerHTML = MONTHS[this.month] + " " + this.year;
 
     var numBlanks = new Date(this.year, this.month, 1).getDay()
-    var numDays = new Date(this.year, this.month + 1, 0).getDate();
-
     this.addBlanks(numBlanks);
+
+    var numDays = new Date(this.year, this.month + 1, 0).getDate();
     this.addDates(numDays);
   };
 
@@ -85,18 +85,6 @@
     };
   };
 
-  Calendar.prototype.select = function (event) {
-    var newDay = event.target.innerHTML;
-    this.day = new Date(this.year, this.month, newDay).getDate();
-    this.date = new Date (this.year, this.month, this.day);
-    this.weekday = this.date.getDay();
-    this.render();
-  };
-
-  Calendar.prototype.isSelectedDate = function (day) {
-    return (day === this.day)
-  }
-
   Calendar.prototype.updateDate = function () {
     //day of month stays the same unless exceeding new month's max date
     var numDays = new Date(this.year, this.month + 1, 0).getDate();
@@ -108,6 +96,14 @@
     this.weekday = this.date.getDay();
   };
 
+  Calendar.prototype.select = function (event) {
+    var newDay = event.target.innerHTML;
+    this.day = new Date(this.year, this.month, newDay).getDate();
+    this.date = new Date (this.year, this.month, this.day);
+    this.weekday = this.date.getDay();
+    this.render();
+  };
+
   Calendar.prototype.addMonthChangeListeners = function () {
     var prev = document.getElementById("prev-month")
     var next = document.getElementById("next-month")
@@ -115,6 +111,10 @@
     prev.addEventListener("click", this.prevMonth.bind(this));
     next.addEventListener("click", this.nextMonth.bind(this));
 
+    this.addKeyBindings();
+  };
+
+  Calendar.prototype.addKeyBindings = function () {
     var calendar = this;
     document.onkeydown = function (event) {
       if (event.keyCode === 37) {
